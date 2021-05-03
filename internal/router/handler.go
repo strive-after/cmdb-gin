@@ -1,6 +1,8 @@
 package router
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/gin-gonic/gin"
+)
 
 type Action func(engine *gin.Engine) error
 

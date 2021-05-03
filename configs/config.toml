@@ -1,0 +1,24 @@
+#https://xuri.me/toml-to-go/
+[http]
+host = "0.0.0.0"
+port = "8080"
+
+
+[log]
+type    = "log"
+level   = "debug"
+path    = "../logs"
+filename = "cmdb.log"
+maxage  = 30
+rotation = 24
+
+[mongo]
+host = "39.105.114.198"
+port = "3303"
+pass = ""
+maxpool = 100
+
+[redis]
+host = ""
+port = ""
+auth = ""
