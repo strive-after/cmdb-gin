@@ -39,9 +39,16 @@ func main() {
 	mongo.InitMongo(&c.Mongo)
 
 	m := mongo.Newm()
-	data := make([]Tes, 0, 0)
-	err = m.FindMany("testaa", 1, 0, bson.M{}, &data)
-	fmt.Println(err, data)
+	err = m.UpdateOne("testaa", bson.D{{"name", "aa"}}, bson.D{
+		{
+			"$set", bson.D{
+				{
+					"addr", "aaaaaa",
+				},
+			},
+		},
+	})
+	fmt.Println(err)
 
 	//初始化携程组
 
